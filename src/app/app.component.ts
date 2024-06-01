@@ -1,14 +1,26 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
+
+
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'my-angular-app';
+
+  f() {
+    this.navigate('first');
+  }
+
+  f1() {
+    this.navigate('second');
+  }
+
+  navigate(path: string) {
+    window.location.href = `/${path}`;
+  }
 }

@@ -1,17 +1,19 @@
-// app-routing.module.ts
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FristComponent } from './frist/frist.component';
+
+import { FirstComponent } from './frist/frist.component';
 import { SecondComponent } from './second/second.component';
 
 export const routes: Routes = [
-  { path: 'frist', component: FristComponent },
+  { path: 'first', component: FirstComponent },
   { path: 'second', component: SecondComponent },
-
+  { path: 'Navbar', redirectTo: '/' } ,
+  { path: '', redirectTo: '/', pathMatch: 'full' } // Example default route
+  // Example default route
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
