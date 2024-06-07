@@ -1,0 +1,10 @@
+input.ng-touched {
+    border-color: red;
+  }
+  
+  small {
+    color: red;
+  }
+  h1{
+    background-color: black !important;
+  }
