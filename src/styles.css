@@ -2,5 +2,7 @@
 .body{
     margin: 0px;
 }
-
+h1{
+    max-width: 0px;
+}
 
